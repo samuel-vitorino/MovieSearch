@@ -11,10 +11,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create vector index of top 1000 movies using a sequence transformer as the embedding model")
 
     parser.add_argument('--device', type=str, default='cuda',choices=['cuda', 'cpu'], help='Device to use, either "cuda" or "cpu". Default is "cuda".')
-    parser.add_argument('--csv-path', type=str, default='imdb_top_1000.csv', help='Path to the CSV movie file. Default is "imdb_top_1000.csv".')
+    parser.add_argument('--csv-path', type=str, default='data/imdb_top_1000.csv', help='Path to the CSV movie file. Default is "imdb_top_1000.csv".')
     parser.add_argument('--assistant-model', type=str, default='meta-llama/Meta-Llama-3.1-8B-Instruct', help='Sequence transformer model to use. Default is "all-MiniLM-L6-v2".')
     parser.add_argument('--embedding-model', type=str, default='all-MiniLM-L6-v2', help='Sequence transformer model to use. Default is "all-MiniLM-L6-v2".')
-    parser.add_argument('--index-name', type=str, default='movies.index', help='Name of the saved index file. Default is movies.index')
+    parser.add_argument('--index-name', type=str, default='data/movies.index', help='Name of the saved index file. Default is movies.index')
     parser.add_argument('--k', type=int, default=5, help='Nearest neighbours to use. Default is 5')
     parser.add_argument('--max-output-tokens', type=int, default=4096, help='Max output tokens by the assistant model. Default is 4096')
 
