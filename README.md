@@ -15,7 +15,7 @@ I have only tested this using the Llama-3.1-8B-Instruct model, but you could try
 Assuming you already have pytorch installed, install faiss, transformers and sentence-transformers:
 
 ```properties
-python index.py --embedding_model [SBERT embedding model]
+pip install -r requirements.txt
 ```
 
 ### Creating the vector index file
